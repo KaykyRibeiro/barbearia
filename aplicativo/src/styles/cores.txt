@@ -1,0 +1,2 @@
+cor light: bg-neutral-100
+cor darck: bg-neutral-900
