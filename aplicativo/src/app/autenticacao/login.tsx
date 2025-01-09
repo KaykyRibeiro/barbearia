@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, Pressable } from "react-native";
+import { View, Text, TouchableOpacity, Pressable, Alert } from "react-native";
 
 import { useRouter } from "expo-router";
 import { Input } from "@/src/components/input";
@@ -8,6 +8,7 @@ export default function Home() {
     const router = useRouter();
     const [input, setInput] = useState("");
     const [hidePass, setHidePass] = useState(true);
+
 
     return (
         <View className="flex-1 bg-neutral-200 dark:bg-neutral-900">

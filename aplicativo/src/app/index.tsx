@@ -6,7 +6,7 @@ import { useRouter } from "expo-router";
 // Função fictícia que simula a consulta ao banco de dados
 const database = {
     users: [
-        { id: 1, name: "Kaique", email: "kaique@example.com" },
+        { id: 3, name: "Kaique", email: "kaique@example.com" },
         { id: 2, name: "Maria", email: "maria@example.com" },
     ],
 };
@@ -21,7 +21,7 @@ export default function Index() {
             try {
                 // Obtém o ID do usuário armazenado
                 const userId = await AsyncStorage.getItem("userId");
-                await AsyncStorage.setItem("userId", "5");
+                await AsyncStorage.setItem("userId", "3");
                 //await AsyncStorage.removeItem("userId");
 
 
@@ -32,15 +32,15 @@ export default function Index() {
                     if (user) {
                         // Se o usuário estiver logado, redireciona para a tela principal
                         console.log(user);
-                        router.push('/(tabs)/home');
+                        router.push('/screens/home');
                     }else{
                         // Se o usuário não estiver logado, redireciona para login
-                        router.push("/login");
+                        router.push("/autenticacao/login");
                     }
                     
                 } else {
                     // Não há ID armazenado, redireciona para login
-                    router.push("/login");
+                    router.push("/autenticacao/login");
                 }
             } catch (error) {
                 console.error("Erro ao verificar o login:", error);
