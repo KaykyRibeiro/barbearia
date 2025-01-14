@@ -4,7 +4,7 @@ import { TouchableOpacity, useColorScheme, View, Text, Pressable, Alert } from '
 
 import Constants from 'expo-constants';
 import { useRouter } from 'expo-router';
-import { Input } from '../../components/input';
+import { Input } from '../../../components/input';
 
 const statusBarHeight = Constants.statusBarHeight;
 export default function RecuperacaoEt3() {
@@ -18,7 +18,7 @@ export default function RecuperacaoEt3() {
     const verificaSenhas = async () => {
         if (inputNewSenha === inputConfirmSenha) {
             await Alert.alert("Senha auterada com sucesso");
-            router.push("/autenticacao/login");
+            router.push("./autenticacao/login");
         } else {
             Alert.alert("Senhas não coincidem");
         }

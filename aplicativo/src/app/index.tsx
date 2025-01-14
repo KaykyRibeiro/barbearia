@@ -35,12 +35,12 @@ export default function Index() {
                         router.push('/screens/home');
                     }else{
                         // Se o usuário não estiver logado, redireciona para login
-                        router.push("/autenticacao/login");
+                        router.push("./autenticacao/login");
                     }
                     
                 } else {
                     // Não há ID armazenado, redireciona para login
-                    router.push("/autenticacao/login");
+                    router.push("./autenticacao/login");
                 }
             } catch (error) {
                 console.error("Erro ao verificar o login:", error);

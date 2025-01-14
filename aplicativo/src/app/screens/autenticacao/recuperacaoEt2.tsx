@@ -5,7 +5,7 @@ import { View, Text, TouchableOpacity, useColorScheme, Pressable } from 'react-n
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import Constants from 'expo-constants';
-import { Input } from '../../components/input';
+import { Input } from '../../../components/input';
 import { useLocalSearchParams } from "expo-router";
 
 

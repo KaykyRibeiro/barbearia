@@ -51,7 +51,7 @@ export default function Home() {
 
                 </View>
                 <View className="w-10/12 flex-row items-center justify-end">
-                    <TouchableOpacity onPress={() => router.push("/recuperacaoEt1")}>
+                    <TouchableOpacity onPress={() => router.push("./recuperacaoEt1")}>
                         <Text className="text-blue-900 dark:text-blue-300 font-medium text-md">Esqueceu sua senha?</Text>
                     </TouchableOpacity>
                 </View>
