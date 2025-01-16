@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import { CardDia } from '@/src/components/cardDia';
 import { Avatar } from '@/src/components/avatar';
 import { Navbar } from '@/src/components/navbar';
+import { AddServico } from '@/src/components/addServico';
 
 const statusBarHeight = Constants.statusBarHeight;
 
@@ -193,6 +194,7 @@ export default function Home() {
             </View>
           ))}
         </ScrollView>
+        <AddServico />
       </View>
       <Navbar />
     </View>
