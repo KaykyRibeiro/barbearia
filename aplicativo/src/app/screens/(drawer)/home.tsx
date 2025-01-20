@@ -46,7 +46,7 @@ export default function Home() {
   const fetchData = async () => {
     const data: DiaData[] = [
       {
-        data: '2025-01-07',
+        data: '2025-01-20',
         compromissos: [
           { id: 1, hora: '08:00', titulo: 'Reunião', descricao: 'Discussão do projeto', formaPaga: 'Dinheiro' },
           { id: 2, hora: '10:00', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
@@ -57,74 +57,74 @@ export default function Home() {
         ],
       },
       {
-        data: '2025-01-08',
+        data: '2025-01-23',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-09',
+        data: '2025-01-24',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-10',
+        data: '2025-01-26',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-11',
+        data: '2025-01-27',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-12',
+        data: '2025-01-29',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
           { id: 4, hora: '15:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-13',
+        data: '2025-01-30',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-14',
+        data: '2025-01-31',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-15',
+        data: '2025-02-01',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-16',
+        data: '2025-02-3',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-17',
+        data: '2025-02-7',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-18',
+        data: '2025-02-8',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],
       },
       {
-        data: '2025-01-19',
+        data: '2025-02-9',
         compromissos: [
           { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
         ],

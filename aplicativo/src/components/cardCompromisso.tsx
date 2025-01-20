@@ -39,7 +39,7 @@ export const Compromisso = ({ id, hora, titulo, descricao, formaPaga }: Compromi
         <View className="flex-1 h-[1px] bg-neutral-700 dark:bg-neutral-100" />
       </View>
 
-      <Pressable onPress={() => {router.push(`/screens/detalhes/detalhesServico?value=${id}`)}}>
+      <Pressable onPress={() => {router.push(`/screens/(drawer)/servicos/detalhesServico?value=${id}`)}}>
         <View className="bg-neutral-900 dark:bg-white p-4 rounded-lg shadow-lg m-2">
           <Text className="text-xl font-semibold text-white dark:text-neutral-900">
             {titulo}
