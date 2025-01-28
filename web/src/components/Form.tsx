@@ -3,27 +3,27 @@ const Form = () => {
     <form className="flex flex-col">
       <div className="flex md:flex-row flex-col md:justify-between items-center gap-5 xl:gap-0  mb-5">
         <div className="flex flex-col">
-          <label>Nome:</label>
-          <input type="text" placeholder="Digite seu nome" />
+          <label className="text-xs font-medium">Nome:</label>
+          <input type="text" placeholder="Digite seu nome" className="text-md bg-neutral-300 py-1 px-3 rounded-xl w-52"/>
         </div>
         <div className="flex flex-col">
-          <label>Telefone:</label>
-          <input type="nunber" placeholder="Digite seu telefone" />
+          <label className="text-xs font-medium">Telefone:</label>
+          <input type="nunber" placeholder="Digite seu telefone" className="text-md bg-neutral-300 py-1 px-3 rounded-xl w-52" />
         </div>
       </div>
       <div className="flex md:flex-row flex-col md:justify-between items-center gap-5 xl:gap-0  mb-5">
         <div className="flex flex-col">
-          <label>Serviço:</label>
-          <select name="serviço" id="servico" required >
-            <option value="">Selecione um serviço</option>
+          <label className="text-xs font-medium">Serviço:</label>
+          <select name="serviço" id="servico" required className="text-md bg-neutral-300 py-1 px-3 rounded-xl w-56">
+            <option value="" className="text-neutral-400">Selecione um serviço</option>
             <option value="cabelo">Corte de cabelo</option>
             <option value="barba">Corte de barba</option>
             <option value="sobrancelha">Sobrancelha</option>
           </select>
         </div>
         <div className="flex flex-col">
-          <label >Profissional:</label>
-          <select name="serviço" id="servico" required >
+          <label className="text-xs font-medium">Profissional:</label>
+          <select name="serviço" id="servico" required className="text-md- bg-neutral-300 py-1 px-3 rounded-xl w-56" >
             <option value="">Selecione um barbeiro</option>
             <option value="barbeiro">Nome barbeiro</option>
           </select>
@@ -31,15 +31,15 @@ const Form = () => {
       </div>
       <div className="flex md:flex-row flex-col md:justify-between items-center gap-5 xl:gap-2  mb-5">
         <div className="flex flex-col">
-          <label >Horário:</label>
-          <select name="serviço" id="servico" required >
+          <label className="text-xs font-medium">Horário:</label>
+          <select name="serviço" id="servico" required  className="text-md bg-neutral-300 py-1 px-3 rounded-xl w-56">
             <option value="">Selecione o horario</option>
             <option value="cabelo">Corte de cabelo</option>
           </select>
         </div>
         <div className="flex flex-col">
-          <label >Pagamento:</label>
-          <select name="serviço" id="servico" required >
+          <label className="text-xs font-medium">Pagamento:</label>
+          <select name="serviço" id="servico" required className="text-md bg-neutral-300 py-1 px-3 rounded-xl w-56">
             <option value="">Selecione a forma de pagamento</option>
             <option value="dinheiro">Dinheiro</option>
             <option value="pix">Pix</option>
@@ -49,10 +49,10 @@ const Form = () => {
         </div>
       </div>
       <div className="flex justify-end pr-10 my-5">
-        <label>Valor:</label>
+        <label className="text-sm font-bold">Valor: <span className="text-2xl text-green-800">R$ 50,00</span></label>
       </div>
 
-      <button>Agendar</button>
+      <button className="bg-lime-600 text-neutral-100 text-xl font-bold p-2 rounded mx-10 mt-5">Agendar</button>
     </form>
   )
 }
