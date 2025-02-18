@@ -48,7 +48,7 @@ function App() {
       </div>
       <div className="absolute bottom-0 m-4">
         <div className="flex flex-row justify-between items-center gap-4">
-          <img src="./src/assets/logo.jpg" alt="" className="w-8 h-8 rounded-full" />
+          <img src="./src/assets/logo.svg" alt="" className="w-10 h-10 rounded-full" />
           <h3 className="text-sm text-neutral-400">© 2025 - Todos os direitos reservados</h3>
         </div>
       </div>
