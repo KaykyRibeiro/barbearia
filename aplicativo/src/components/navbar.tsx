@@ -2,7 +2,6 @@ import { View } from "react-native";
 
 
 import { MenuButton } from "./menu-button";
-import { GerenciaBtn } from "./gerenciaBtn";
 import { SearchButton } from "./search";
 import HomeButton from "./homeButton";
 
@@ -14,9 +13,6 @@ export function Navbar() {
             </View>
             <View>
                 <SearchButton/>
-            </View>
-            <View>
-                <GerenciaBtn/>
             </View>
             <View>
                 <MenuButton />
