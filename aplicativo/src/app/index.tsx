@@ -1,9 +1,28 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { View, ActivityIndicator, Text } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 
 // Função fictícia que simula a consulta ao banco de dados
+
+import axios from 'axios';
+import React from "react";
+//const axios = require('axios'); // legacy way
+
+// Make a request for a user with a given ID
+axios.get('/user?ID=12345')
+    .then(function (response) {
+        // handle success
+        console.log(response);
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+    .finally(function () {
+        // always executed
+    });
+
 const database = {
     users: [
         { id: 3, name: "Kaique", email: "kaique@example.com" },
@@ -12,7 +31,7 @@ const database = {
 };
 
 export default function Index() {
-    
+
     const [loading, setLoading] = useState(true);
     const router = useRouter();
 
@@ -33,11 +52,11 @@ export default function Index() {
                         // Se o usuário estiver logado, redireciona para a tela principal
                         console.log(user);
                         router.push('/screens/home');
-                    }else{
+                    } else {
                         // Se o usuário não estiver logado, redireciona para login
                         router.push("./autenticacao/login");
                     }
-                    
+
                 } else {
                     // Não há ID armazenado, redireciona para login
                     router.push("./autenticacao/login");
