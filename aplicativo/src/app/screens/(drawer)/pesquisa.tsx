@@ -15,12 +15,40 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import { Fontisto } from '@expo/vector-icons';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 
-
-
-
+import { useEffect } from 'react';
 
 const statusBarHeight = Constants.statusBarHeight;
+
+type Service = {
+  id: number;
+  cli_name: string;
+  service_desc: string;
+  service_pag: string;
+};
+
 export default function Pesquisa() {
+
+  const [services, setServices] = useState<Service[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchServices() {
+      try {
+        const response = await fetch('http://192.168.1.3:3000/api/services'); // Use o IP local da sua máquina
+        if (!response.ok) {
+          throw new Error(`Erro ao buscar serviços: ${response.status}`);
+        }
+        const data: Service[] = await response.json(); // Converte para JSON
+        setServices(data);
+      } catch (error) {
+        console.error("Erro ao buscar serviços:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchServices();
+  }, []);
+
   const colorScheme = useColorScheme();
   const [date, setDate] = useState(new Date());
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
@@ -110,9 +138,21 @@ export default function Pesquisa() {
             </View>
           </View>
         </View>
-        <ScrollView className='flex-col w-full  px-5 mx-10'>
-          <CardPesquisa id={0} hora={'10:00'} titulo={'Antonio'} descricao={'Corte, barba e sobrancelha'} formaPaga={'Pix'} status={'Finalizado'}/>
-        </ScrollView>
+        <View className='flex-col w-full  px-5 mx-10'>
+          <FlatList
+            data={services}
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={({ item }) => (
+              <CardPesquisa
+                id={item.id}
+                cli_name={item.cli_name}
+                service_desc={item.service_desc}
+                service_pag={item.service_pag}
+              />
+            )}
+            contentContainerStyle={{ padding: 16 }}
+          />
+        </View>
       </View>
       <Navbar />
     </View>
