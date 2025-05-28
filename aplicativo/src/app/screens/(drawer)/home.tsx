@@ -15,6 +15,7 @@ const statusBarHeight = Constants.statusBarHeight;
 
 interface CompromissoData {
   id: number;
+  barbeiro: string;
   hora: string;
   titulo: string;
   descricao: string;
@@ -46,87 +47,14 @@ export default function Home() {
   const fetchData = async () => {
     const data: DiaData[] = [
       {
-        data: '2025-01-20',
+        data: '2025-03-06',
         compromissos: [
-          { id: 1, hora: '08:00', titulo: 'Reunião', descricao: 'Discussão do projeto', formaPaga: 'Dinheiro' },
-          { id: 2, hora: '10:00', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
-          { id: 3, hora: '16:00', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
-          { id: 5, hora: '21:00', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
-          { id: 6, hora: '21:30', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
-          { id: 7, hora: '22:00', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
-        ],
-      },
-      {
-        data: '2025-01-23',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-01-24',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-01-26',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-01-27',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-01-29',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-          { id: 4, hora: '15:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-01-30',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-01-31',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-02-01',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-02-3',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-02-7',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-02-8',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
-        ],
-      },
-      {
-        data: '2025-02-9',
-        compromissos: [
-          { id: 3, hora: '14:00', titulo: 'Almoço', descricao: 'Com cliente', formaPaga: 'Dinheiro' },
+          { id: 1, barbeiro: 'Cleber', hora: '08:00', titulo: 'Reunião', descricao: 'Discussão do projeto', formaPaga: 'Dinheiro' },
+          { id: 2, barbeiro: 'Cleber', hora: '10:00', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
+          { id: 3, barbeiro: 'Cleber', hora: '16:00', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
+          { id: 5, barbeiro: 'Cleber', hora: '21:00', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
+          { id: 6, barbeiro: 'Cleber', hora: '21:30', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
+          { id: 7, barbeiro: 'Cleber', hora: '22:00', titulo: 'Dentista', descricao: 'Consulta semestral', formaPaga: 'Cartão' },
         ],
       },
     ];

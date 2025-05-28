@@ -6,8 +6,8 @@ import { useRouter } from "expo-router";
 // Função fictícia que simula a consulta ao banco de dados
 const database = {
     users: [
-        { id: 3, name: "Kaique", email: "kaique@example.com" },
-        { id: 2, name: "Maria", email: "maria@example.com" },
+        { id: 3, name: "Kaique", tell: "kaique@example.com", acesso: "gerente" },
+        { id: 2, name: "Maria", tell: "maria@example.com", acesso: "barbeiro" },
     ],
 };
 
@@ -17,6 +17,7 @@ export default function Index() {
     const router = useRouter();
 
     useEffect(() => {
+
         const checkLogin = async () => {
             try {
                 // Obtém o ID do usuário armazenado

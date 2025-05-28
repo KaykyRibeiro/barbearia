@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { View, Text, TouchableOpacity, Pressable, Alert } from "react-native";
+import { AuthContext } from "@/src/context/AuthContext";
 
 import { useRouter } from "expo-router";
 import { Input } from "@/src/components/input";
 import { Ionicons } from '@expo/vector-icons';
-export default function Home() {
+export default function Login() {
     const router = useRouter();
     const [input, setInput] = useState("");
     const [hidePass, setHidePass] = useState(true);
+    const [tell, setTell] = useState("");
+    const auth = useContext(AuthContext);
 
 
     return (
@@ -24,7 +27,13 @@ export default function Home() {
                 </View>
                 <View className="w-10/12">
                     <Input>
-                        <Input.Field placeholder="E-mail ou Telefone" style={{ width: "100%" }} />
+                        <Input.Field
+                            placeholder="Telefone"
+                            style={{ width: "100%" }}
+                            value={tell}
+                            onChangeText={setTell}
+                            keyboardType="phone-pad"
+                        />
                     </Input>
                 </View>
                 <View className="w-10/12 flex-row items-center justify-evenly  bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-950 rounded-full">
@@ -55,7 +64,10 @@ export default function Home() {
                         <Text className="text-blue-900 dark:text-blue-300 font-medium text-md">Esqueceu sua senha?</Text>
                     </TouchableOpacity>
                 </View>
-                <Pressable className="w-7/12 items-center justify-center bg-neutral-950 text-neutral-100 rounded-full mt-4 h-12">
+                <Pressable 
+                    className="w-7/12 items-center justify-center bg-neutral-950 text-neutral-100 rounded-full mt-4 h-12"
+
+                >
                     <Text className="text-neutral-100 font-light text-2xl">Entrar</Text>
                 </Pressable>
             </View>
